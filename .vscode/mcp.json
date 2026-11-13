@@ -1,0 +1,22 @@
+{
+  "servers": {
+    "a1-retrieval": {
+      "type": "stdio",
+      "command": "python",
+      "args": ["${workspaceFolder}/retrieval_server/server.py"],
+      "env": {
+        "A1_LAB_DIR": "${workspaceFolder}/lab-documents",
+        "A1_STORE_DIR": "${workspaceFolder}/.a1-store",
+        "OPENAI_API_KEY": "${input:openai-key}"
+      }
+    }
+  },
+  "inputs": [
+    {
+      "id": "openai-key",
+      "type": "promptString",
+      "description": "OpenAI key for the lab (leave empty to use the offline fallback)",
+      "password": true
+    }
+  ]
+}

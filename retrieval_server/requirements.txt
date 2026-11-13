@@ -1,0 +1,4 @@
+mcp>=2,<3
+langchain-text-splitters>=0.3
+numpy
+scikit-learn
